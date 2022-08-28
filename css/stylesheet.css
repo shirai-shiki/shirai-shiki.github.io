@@ -49,6 +49,7 @@ a{
 }
 #titleL{
 	border-right-width: 1px ;
+	vertical-align: center ;
 }
 #titleR{
 	border-left-width: 1px ;
