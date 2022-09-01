@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercise 1.10</title>
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
+	</head>
+	<body> 
+		<div class="header">
+			<h1 id="titleL">2022-09-01</h1>
+			<h1 id="titleR">SICP - Exercise 1.10</h1>
+		</div>
+		<div class="content">
+			<a href=../../index.html id="return">return</a>
+			<br><br>
+
+			<p>°oO[=_=]Oo°</p>
+			<p><i>(A 1 10)</i>:
+			After substituting for the first few iterations, it looks 
+			like x stays constant at 1, and is reduced to 0 every time,
+			so we always do <i>(* 2 y)</i>. Since y decrements
+			each time, it acts like an iterator, so when it gets to 0,
+			we'll have 2^10=1024.</p>
+			<p><i>(A 2 4)</i>: This one looks long so I'll just put it
+			into the REPL: 65536</p>
+			<p><i>(A 3 3)</i>: 65536 again</p>
+			<p><i>(f n)</i>: 2n</p>
+			<p><i>(g n)</i>: 2<sup>n</sup></p>
+			<p><i>(h n)</i>: Powers of 2 again... But the pattern is
+			strange. Writing it out gives: 
+			<ol>
+				<li>2      ::  2<sup>1</sup></li>
+				<li>4      ::  2<sup>2</sup></li>
+				<li>16     ::  2<sup>4</sup></li>
+				<li>65536  ::  2<sup>16</sup></li>
+			</ol>
+			</p>
+			<p>
+			So it would seem that for values greater than 1, 2 is raised
+			to the power of the previous value. Assuming that 0 is not 
+			counted as a positive integer value then, (h n)=2<sup>h(n-1)</sup>
+			</p>
+			<br>
+			<p>Recurse!</p>
+			<a href=./1.11.html id="next">Next 1.11</a>
+
+		</div>
+	</body>
+</html>

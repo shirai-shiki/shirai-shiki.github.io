@@ -1,4 +1,4 @@
-;; SICP ex 1.3
+;; SICP 2e Ex 1.3
 
 (define (f x y z)
   (define (square a) (* a a))

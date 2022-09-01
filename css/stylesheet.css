@@ -3,6 +3,7 @@
 	--mint1: #86bea4 ; 
 	--darkmint: #68a187 ;
 	--cream: #ffefae ;
+	--darkcream: #d7b36e ;
 	--palecream: #fdf6e3 ;
 	--brick: #d9534f ;
 	--tangerine: #ffad60 ;
@@ -28,26 +29,27 @@ a{
 i{
 	color: var( --darkmint ) ;
 }
+li::marker {
+  color: var(--darkcream); 
+}
 .header{
 	width: 100% ; 
 	display: flex ;
 	justify-content: center ;
 }
 .lisp, .fileheader{
-	background-color: var( --grey ) ;
 	border: 2px solid var( --raven );
 	padding: 0 15px 0 15px ;
+	background-color: var( --white ) ;
 }
 .fileheader{
 	border-bottom-width: 0px ;
-	background-color: var( --darkishgrey ) ;
 }
 .fileheader *{
-	color: var( --cream ) ;
+	color: var( --darkcream ) ;
 }
 .lisp {
-	padding-left: 15px ;
-	padding-right: 15px ;
+	padding: 0px 15px 10px 15px ;
 	line-height: 20px ;
 }
 .lisp code{
