@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercise 1.3</title>
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
+	</head>
+	<body> 
+		<div class="header">
+			<h1 id="titleL">2022-09-01</h1>
+			<h1 id="titleR">SICP - Exercise 1.3</h1>
+		</div>
+		<div class="content">
+			<a href="../../index.html" id="return">return</a>
+			<br><br>
+
+			<p>o_o</p>
+			<p>Hmmm... So we can find the smallest value then sum the squares of the remaining values.</p>
+			<div class="fileheader"><a href="./1.3.scm">1.3.scm</a></div>
+			<div class="lisp">
+			<pre>
+			<code>
+;; SICP ex 1.3
+(define (f x y z)
+  (define (square a) (* a a))
+  (define (sumsquare a b) (+ (square a) (square b)))
+  (cond ((and (< x y) (< x z))
+         (sumsquare y z))
+        ((and (< y x) (< y z))
+         (sumsquare x z))
+        ((and (< z x) (< z y))
+         (sumsquare x y))
+        ;; Find largest
+        (else (cond ((= x y z)
+                     (sumsquare x y))
+                    ((= x y)
+                     (sumsquare x z))
+                    ((= x z)
+                     (sumsquare x y))
+                    ((= y z)
+                     (sumsquare x z))))))
+
+(list (f 1 2 3)
+      (f 3 2 1)
+      (f 3 3 1)
+      (f 1 1 3)
+      (f 5 5 5)
+      (f 5 1 5))
+			</code>
+			</pre>
+			</div>
+			<p>Hahahaha.... It's hideous! This is probably an awful solution but... Oh well, time to move on!</p>
+			<br>
+			<p>Recurse!</p>
+
+			<a href="./1.4.html" id="next">Next 1.4</a>
+		</div>
+	</body>
+</html>

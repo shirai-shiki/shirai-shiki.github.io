@@ -1,12 +1,16 @@
 :root{
 	--mint: #96ceb4 ;
 	--mint1: #86bea4 ; 
-	--cream: #ffeead ;
+	--darkmint: #68a187 ;
+	--cream: #ffefae ;
 	--palecream: #fdf6e3 ;
 	--brick: #d9534f ;
 	--tangerine: #ffad60 ;
 	--white: #ffffff ;
+	--grey: #dfdfdc ;
+	--darkishgrey: #454549 ;
 	--raven: #17223b ;
+	--blue: #3772db ;
 }
 
 body {
@@ -21,10 +25,33 @@ ul , p{
 a{
 	color: var( --raven ) ;
 }
+i{
+	color: var( --darkmint ) ;
+}
 .header{
 	width: 100% ; 
 	display: flex ;
 	justify-content: center ;
+}
+.lisp, .fileheader{
+	background-color: var( --grey ) ;
+	border: 2px solid var( --raven );
+	padding: 0 15px 0 15px ;
+}
+.fileheader{
+	border-bottom-width: 0px ;
+	background-color: var( --darkishgrey ) ;
+}
+.fileheader *{
+	color: var( --cream ) ;
+}
+.lisp {
+	padding-left: 15px ;
+	padding-right: 15px ;
+	line-height: 20px ;
+}
+.lisp code{
+	white-space: pre-wrap;
 }
 .content{
 	width: 60% ;
@@ -54,8 +81,16 @@ a{
 #titleR{
 	border-left-width: 1px ;
 }
-#return{
+#return, #next{
 	border-width: 2px ;
 	border-style: dashed ; 
 	padding: 5px ;
+	border-color: var( --raven ) ;
 }
+#return{
+	color: var( --brick );
+}
+#next{
+	color: var( --blue );
+}
+
