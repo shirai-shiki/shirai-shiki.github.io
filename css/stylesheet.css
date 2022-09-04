@@ -17,7 +17,7 @@
 body {
 	font-family: monospace ;
 	color: var( --raven ) ;
-	background-color: var( --white ) ;
+	background-color: var( --white );
 }
 ul , p{
 	list-style-type: square ; 
@@ -54,6 +54,9 @@ li::marker {
 }
 .lisp code{
 	white-space: pre-wrap;
+}
+.tree {
+	line-height: 15px ;
 }
 .content{
 	width: 60% ;
