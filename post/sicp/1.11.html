@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercise 1.11</title>
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
+	</head>
+	<body> 
+		<div class="header">
+			<h1 id="titleL">2022-09-04</h1>
+			<h1 id="titleR">SICP - Exercise 1.11</h1>
+		</div>
+		<div class="content">
+			<a href=../../index.html id="return">return</a>
+			<br><br>
+
+			<p>Buon Giorno</p>
+			<p>
+			An if statement should work fine right?
+			</p>
+			<div class="fileheader">
+				<a href="./1.11.scm">1.11.scm</a>
+			</div>
+			<div class="lisp">
+				<code>
+;; SICP Ex 1.11                                                                 
+(define (f n)
+  (if (< n 3) n
+      (+ (f(- n 1)) (* 2 (f(- n 2))) (* 3 (f(- n 2))))))
+
+(list (f 1)
+      (f 2)
+      (f 4)
+      (f 8))
+				</code>
+			</div>
+			<br>
+			<p>Recurse!</p>
+			<a href=./1.12.html id="next">Next 1.12</a>
+
+		</div>
+	</body>
+</html>
