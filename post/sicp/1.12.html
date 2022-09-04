@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercise 1.12</title>
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
+	</head>
+	<body> 
+		<div class="header">
+			<h1 id="titleL">2022-09-01</h1>
+			<h1 id="titleR">SICP - Exercise 1.12</h1>
+		</div>
+		<div class="content">
+			<a href=../../index.html id="return">return</a>
+			<br><br>
+
+			<p>This one looks a little trickier.</p>
+			<p>So logically, <i>5C2</i> for example is <i>(4C1)+(4C2)</i></p>
+			<p>So we can assume <i>nCr=(n-1)C(r-1)+(n-1)Cr</i> 
+			for all <i>n > 0 , r < n</i></p>
+			<p>So for <i>n >= r</i>, return 1, and for <i>n < 0</i> return 0,
+			otherwise recurse on the two upper values</p>
+
+			<div class="fileheader"><a href="./1.12.scm">1.12.scm</a></div>
+			<div class="lisp">
+				<code>
+;; SICP Ex 1.12                                                                                                     
+(define (pa n r)
+  (cond ((< n 0) 0)
+        ((not (< r n)) 1)
+        (else (+ (pa (- n 1) r)
+                 (pa (- n 1) (- r 1))))))
+
+(list(list (pa 0 0))
+     (list (pa 1 0) (pa 1 1))
+     (list (pa 2 0) (pa 2 1) (pa 2 2))
+     (list (pa 3 0) (pa 3 1) (pa 3 2) (pa 3 3))
+     (list (pa 4 0) (pa 4 1) (pa 4 2) (pa 4 3) (pa 4 4))
+     (list (pa 5 0) (pa 5 1) (pa 5 2) (pa 5 3) (pa 5 4) (pa 5 5)))
+				</code>
+			</div>
+
+			<br>
+			<p>Recurse!</p>
+			<a href=./1.13.html id="next">Next 1.13</a>
+
+		</div>
+	</body>
+</html>
