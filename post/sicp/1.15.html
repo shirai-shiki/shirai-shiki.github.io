@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercise 1.15</title>
+		<link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
+	</head>
+	<body> 
+		<div class="header">
+			<h1 id="titleL">2022-09-05</h1>
+			<h1 id="titleR">SICP - Exercise 1.15</h1>
+		</div>
+		<div class="content">
+			<a href=../../index.html id="return">return</a>
+			<br><br>
+
+			<p>uu</p>
+			
+			<ol>
+				<li>
+					<ul>
+						<li>(sine 12.15)</li>
+						<li>= (p (sine 4.05))</li>
+						<li>= (p (p (sine 1.35)))</li>
+						<li>= (p (p (p (sine 0.45))))</li>
+						<li>= (p (p (p (p (sine 0.15)))))</li>
+						<li>= (p (p (p (p (p (sine 0.05))))))</li>
+					</ul>
+					<p>So the answer is 5</p>
+				</li>
+				<li>
+					<i>a</i> is divided by 3 for each step, so <i>a/(3^k)</i> where k is the number of steps gives the final result. <i>12.15/(3^k)=0.05</i> so <i>k=log(245)/log(3)</i> so <i>Θ(log(n))</i>. 
+				</li>
+			</ol>
+
+			<br>
+			<p>Recurse!</p>
+			<a href=./1.16.html id="next">Next 1.16</a>
+
+		</div>
+	</body>
+</html>
+
